@@ -4,7 +4,6 @@ public class QueueIntTest {
 
 	public static void main(String[] args) {
 		QueueInt a = new QueueInt();
-		
 
 		a.push(3);
 		a.push(5);
@@ -12,8 +11,7 @@ public class QueueIntTest {
 		a.push(6);
 		a.push(9);
 		a.push(8);
-		
-	
+
 		System.out.println("Peek ");
 		System.out.println(a.peek());
 		System.out.println("Pop ");
@@ -63,8 +61,7 @@ public class QueueIntTest {
 		System.out.println("Contines");
 		System.out.println(a.contines(5));
 		System.out.println();
-		
-		
+
 		System.out.println("Peak ");
 		System.out.println(a.peek());
 		System.out.println("Pop ");
@@ -74,9 +71,6 @@ public class QueueIntTest {
 		System.out.println("Contines");
 		System.out.println(a.contines(5));
 		System.out.println();
-
-
-
 
 	}
 

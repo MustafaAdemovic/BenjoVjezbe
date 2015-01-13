@@ -65,10 +65,14 @@ public class StackInt {
 	}
 
 	private int getSize(IntNode current, int counter) {
-		if (current == null) {// ako je current nula vracamo brojac u ovom slucaju brojac nam je 0
+		if (current == null) {// ako je current nula vracamo brojac u ovom
+								// slucaju brojac nam je 0
 			return counter;
 		}
-		return getSize(current.next, counter + 1);//Ako nije current nula ide na svaki sljedeci i tako poceava brojac za 1 i na kraju dobijemo duzinu
+		return getSize(current.next, counter + 1);// Ako nije current nula ide
+													// na svaki sljedeci i tako
+													// poceava brojac za 1 i na
+													// kraju dobijemo duzinu
 	}
 
 	/**
@@ -88,11 +92,14 @@ public class StackInt {
 	}
 
 	private boolean contines(int value, IntNode current) {
-		if (current == null) {// kada smo rekurzijom dosli do nule a nismo nasli podudaranje(jednakost) vracamo false
+		if (current == null) {// kada smo rekurzijom dosli do nule a nismo nasli
+								// podudaranje(jednakost) vracamo false
 			return false;
-		} else if (current.getValue() == value) {// kada smo rekurzivno nasli podudaranje vracamo true;
+		} else if (current.getValue() == value) {// kada smo rekurzivno nasli
+													// podudaranje vracamo true;
 			return true;
-		} else {// kada nismo doli do kraja i nismo nasli podudaranje vracamo contines i idemo na sljedeci current
+		} else {// kada nismo doli do kraja i nismo nasli podudaranje vracamo
+				// contines i idemo na sljedeci current
 			return contines(value, current.next);
 		}
 
