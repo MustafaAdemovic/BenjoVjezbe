@@ -36,6 +36,8 @@ public class StreamReadWriter {
 		
 		FileInputStream fs = null;
 		Reader is;
+		int save = filePicker.showSaveDialog(filePicker);
+		String savedFile = filePicker.getSelectedFile().getAbsolutePath();
 
 		byte[] inputBuffer = new byte[10];
 
@@ -47,7 +49,7 @@ public class StreamReadWriter {
 			fs = new FileInputStream(pickedFile);
 			is = new InputStreamReader(fs);
 			BufferedReader bs = new BufferedReader(is);
-			ofs = new FileOutputStream("./File/input.txt", true);
+			ofs = new FileOutputStream(savedFile, true);
 			os = new DataOutputStream(ofs);
 			
 
